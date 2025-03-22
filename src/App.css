@@ -73,3 +73,84 @@
   margin-bottom:10px;
 
 }
+
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+
+
+.side-search-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.side-search-area input {
+  flex-grow: 1;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.side-login-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-top: 1px solid #eee;
+}
+
+/* 기본: 숨김 (데스크탑에서 안 보임) */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.product-img img{
+  width: -webkit-fill-available
+}
+
+/* 모바일에서는 보이게! */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .menu-area,
+  .navbar__icon {
+    display: none !important;
+  }
+}
